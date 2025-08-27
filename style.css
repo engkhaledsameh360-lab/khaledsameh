@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -8,16 +8,17 @@
     scroll-behavior: smooth; 
 }
 
-
 header {
     background-color: #1d2b2d;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 9;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px ;
+    padding: 15px 100px;
 }
 
 .logo{
@@ -33,13 +34,12 @@ header {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
 .navigation a:hover{
     color: #07b3de;
 }
-
 
 section {
     padding: 100px 200px;
@@ -50,11 +50,9 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:  url(images/cover2.jpg) no-repeat;
+    background: url(images/cover2.jpg) no-repeat center;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-
 }
 
 .main h2 {
@@ -87,8 +85,7 @@ section {
     font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
-    padding: 0.9375em 2.1875em;
-    letter-spacing: 1px;
+    padding: 0.9em 2.2em;
     border-radius: 15px;
     margin-bottom: 40px;
     transition: 0.4s ease;
@@ -102,11 +99,11 @@ section {
 .social-icons a {
     color: #fff;
     font-size: 1.7em;
-    padding-right: 40px;
+    padding-right: 20px;
 }
-.cards {
-background-color: rgb(235, 230, 250);
 
+.cards {
+    background-color: rgb(235, 230, 250);
 }
 
 .title {
@@ -121,28 +118,32 @@ background-color: rgb(235, 230, 250);
 .content {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px; /* مسافة بين الكروت */
 }
 
 .card {
     background-color: #fff;
-    width: 14em;
-    box-shadow: 0 5px 15px rgb(21, 0, 255);
+    width: 14em; /* عرض الكارت أصغر شوية */
+    min-height: 12em;
+    box-shadow: 0 5px 15px rgba(21, 0, 255, 0.2);
     border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
+    padding: 20px;
+    margin: 10px;
     transition: 0.4s ease;
+    word-wrap: break-word;       /* عشان الكلمات الطويلة زي الإيميل تتكسر */
+    overflow-wrap: break-word;   /* دعم إضافي للتكسير */
+    text-align: center;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card .icon {
     color: #09adff;
-    font-size:5em;
-    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 10px;
 }
 
 .info {
@@ -151,14 +152,14 @@ background-color: rgb(235, 230, 250);
 
 .info h3{
     color: #3a6cf4;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 700;
-    margin: 10px;
+    margin: 10px 0;
 }
-
 
 .projects {
     background-color: #000016;
+    color: white;
 }
 
 .projects .content{
@@ -167,22 +168,19 @@ background-color: rgb(235, 230, 250);
 
 .project-card {
     background-color: #fff;
-    border: 1px solid #fff;
     min-height: 14em;
-    width: 23em;
+    width: 20em;
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
     transition: 0.7s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-card:hover {
-   transform: scale(1.1);
+   transform: scale(1.05);
 }
-
-.project-card:hover .project-image {
-    opacity: 0.9;
- }
 
 .project-image img{
     width: 100%
@@ -190,17 +188,17 @@ background-color: rgb(235, 230, 250);
 
 .project-info {
     padding: 1em;
+    color: black;
 }
 
 .project-category {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #000;
 }
 
 .project-title {
     display: flex;
     justify-content: space-between;
-    text-transform: uppercase;
     font-weight: 800;
     margin-top: 10px;
 }
@@ -215,16 +213,7 @@ background-color: rgb(235, 230, 250);
 }
 
 .contact .icon{
-    font-size: 4.5em;
-}
-
-.contact .info h3 {
-    color: #000;
-}
-
-.contact .info p {
-    font-size: 0.6em;
-    font-weight: 700;
+    font-size: 4em;
 }
 
 .footer {
@@ -233,11 +222,7 @@ background-color: rgb(235, 230, 250);
     padding: 2em;
     display: flex;
     justify-content: space-between;
-}
-
-.footer-title {
-    font-size: 1.3em;
-    font-weight: 600;
+    flex-wrap: wrap;
 }
 
 .footer-title span {
@@ -246,64 +231,74 @@ background-color: rgb(235, 230, 250);
 
 .footer .social-icons a{
     font-size: 1.3em;
-    padding: 0 12px 0 0;
+    padding: 0 12px;
 }
-.About-me span {
-    color: #3a6cf4;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;   
-}
+
+/* Responsive Design */
 @media (max-width:1023px){
     header{
-        padding: 12px 20px;
+        padding: 12px 40px;
     }
 
     .navigation a{
-        padding-left: 10px;
-    }
-
-    .title{
-        font-size: 1.8em;
+        padding-left: 20px;
     }
 
     section{
-        padding: 80px 20px;
+        padding: 80px 40px;
     }
 
-    .main-content h2{
-        font-size: 1em;
+    .main h2 span{
+        font-size: 2.5em;
     }
 
-    .main-content h3{
+    .main h3{
         font-size: 1.6em;
     }
 
     .content{
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width:768px){
+    header{
         flex-direction: column;
-        align-items: center;
     }
 
+    .navigation{
+        margin-top: 10px;
+    }
+
+    .main{
+        text-align: center;
+        justify-content: center;
+    }
+
+    .social-icons{
+        justify-content: center;
+    }
+
+    .card, .project-card{
+        width: 80%;
+    }
 }
 
-@media (max-width:641px){
+@media (max-width:480px){
     body{
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    .main-content h2{
-        font-size: 0.8em;
+    .main h2 span{
+        font-size: 2em;
     }
 
-    .main-content h3{
-        font-size: 1.4em;
+    .main h3{
+        font-size: 1.2em;
     }
-}
 
-@media (max-width:300px){
-    body{
-        font-size: 10px;
+    .card, .project-card{
+        width: 95%;
     }
 }
